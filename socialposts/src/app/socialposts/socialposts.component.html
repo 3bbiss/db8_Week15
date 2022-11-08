@@ -1,0 +1,17 @@
+
+<p>socialposts list</p>
+
+<div *ngFor="let post of ThePosts">
+    <app-socialpost [ThePost]="post"></app-socialpost>
+</div>
+
+
+<button (click)="showForm()">Show form!</button>
+
+<div *ngIf="formShowing == true">
+    <h2>View Form</h2>
+    Title: <input type="text" [(ngModel)]="newPost.title"/> <br/>
+    Thought: <input type="text" [(ngModel)]="newPost.thought"/>
+    <button (click)="addPost()">Add Post</button>
+    <button (click)="cancelAdd()">Cancel</button>
+</div>
