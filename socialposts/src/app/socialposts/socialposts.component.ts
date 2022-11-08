@@ -7,7 +7,7 @@ import { Post } from '../post';
 	styleUrls: ['./socialposts.component.css']
 })
 export class SocialpostsComponent implements OnInit {
-	@Input() ThePosts: Post[] = [
+	/* @Input() */ ThePosts: Post[] = [
 		{
 			title: "p1",
 			thought: "t1"
