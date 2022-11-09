@@ -1,0 +1,13 @@
+<h3>List of PETS:</h3>
+
+<ng-container *ngFor="let pet of PetSrv.get()">
+    <app-pet-detail  (deleteEvent)="deletePet($event)" [ThePet]="pet"></app-pet-detail>
+</ng-container>
+
+<h2>Add Pet</h2>
+<div>
+    Name: <input type="text" [(ngModel)]="newName" /> <br/>
+    Species: <input type="text" [(ngModel)]="newSpecies" /> <br/>
+    Born: <input type="number" [(ngModel)]="newBorn" /> <br/>
+    <button (click)="add()">Add</button>
+</div>
