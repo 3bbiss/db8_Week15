@@ -1,0 +1,17 @@
+<p>social-posts List!</p>
+
+<ng-container *ngFor="let post of ThePosts">
+    <app-single-post [ThePost]="post" (remove)="removeItem($event)"></app-single-post>
+</ng-container>
+
+<div>
+    <button style="margin-top: 2em;" *ngIf="!addShowing"  (click)="showAddForm()">Show Add Form</button>
+</div>
+
+<div *ngIf="addShowing">
+    <h2>Add Post</h2>
+    Title: <input type="text" [(ngModel)]="NewTitle"/> <br/>
+    Thought: <input type="text" [(ngModel)]="NewThought"/> <br/>
+    <button (click)="add()">Add</button>
+    <button (click)="cancel()">Cancel</button>
+</div>
