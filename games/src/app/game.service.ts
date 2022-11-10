@@ -6,7 +6,7 @@ import { Game } from './game';
 })
 export class GameService {
   TheList: Game[] = [
-    {title: "g1", year: 1, console: false}
+    {title: "g1", year: 1, console: false},
     {title: "g2", year: 2, console: true}
   ];
 
