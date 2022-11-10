@@ -1,4 +1,3 @@
-import { DomElementSchemaRegistry } from '@angular/compiler';
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { Pet } from '../pet';
 

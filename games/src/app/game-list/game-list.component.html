@@ -1,1 +1,16 @@
-<p>game-list works!</p>
+<h3>List of Games</h3>
+
+<ng-container *ngFor="let game of GameSrv.get()">
+    <app-game-detail (deleteEvent)="deleteGame($event)" [TheGame]="game"></app-game-detail>
+</ng-container>
+
+<button style="margin-top: 3em" *ngIf="!addShowing" (click)="showAddForm()">Show Add Form</button>
+
+<div *ngIf="addShowing">
+    <h3>Add Game</h3>
+    Title: <input type="text" [(ngModel)]="newTitle" /> <br/>
+    Year: <input type="number" [(ngModel)]="newYear" /> <br/>
+    Console: <input type="checkbox" [(ngModel)]="newConsole" /> <br/>
+    <button (click)="add()">Add</button>
+    <button (click)="cancelAdd()">Cancel</button>
+</div>

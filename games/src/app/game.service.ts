@@ -11,4 +11,9 @@ export class GameService {
   ];
 
   constructor() { }
+
+  get(): Game[]{
+    return this.TheList;
+  }
+
 }
